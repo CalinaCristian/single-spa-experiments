@@ -6,7 +6,6 @@
     "build": "concurrently npm:build:*",
     "build:webpack": "webpack --mode=production",
     "analyze": "webpack --mode=production --env analyze",
-    "prepare": "husky install",
     "build:types": "tsc"
   },
   "devDependencies": {
@@ -26,7 +25,6 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-ts-react-important-stuff": "^3.0.0",
     "eslint-plugin-prettier": "^3.4.1",
-    "husky": "^7.0.2",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.5.1",
     "jest-cli": "^27.5.1",
