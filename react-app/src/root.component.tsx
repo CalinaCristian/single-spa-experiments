@@ -4,23 +4,26 @@ import { Page2 } from './pages/page-2';
 import { Home } from './pages/home';
 import { Subpage } from './pages/subpage';
 
+import './root.component.css';
+
 export default function Root(props) {
   return (
     <Router basename="react">
       <div>
+        <h3>👋 React root 👋</h3>
         <nav>
-          <ul>
-          <li>
-              <Link to="/">Home</Link>
+          <ul className="nav-list">
+            <li>
+              <Link to="/">🔗Home</Link>
             </li>
             <li>
-              <Link to="/page1">Page 1</Link>
+              <Link to="/page1">🔗Page 1</Link>
             </li>
             <li>
-              <Link to="/page2">Page 2</Link>
+              <Link to="/page2">🔗Page 2</Link>
             </li>
             <li>
-              <Link to="/page2/subpage">Page 2 / Subpage</Link>
+              <Link to="/page2/subpage">🔗Page 2 / Subpage</Link>
             </li>
           </ul>
         </nav>

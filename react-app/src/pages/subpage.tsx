@@ -1,1 +1,1 @@
-export const Subpage = () => <h4>Subpage</h4>
+export const Subpage = () => <h4>React Subpage</h4>
