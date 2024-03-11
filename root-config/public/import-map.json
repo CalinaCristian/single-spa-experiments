@@ -1,0 +1,7 @@
+{
+    "imports": {
+        "@cristian/root-config": "//localhost:9000/cristian-root-config.js",
+        "@cristian/react-app": "//localhost:8080/cristian-react-app.js",
+        "@cristian/ng-app": "//localhost:4200/main.js"
+    }
+}
