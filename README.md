@@ -12,8 +12,8 @@ Experiments with single-spa across frameworks
     - Test out if we can keep existing target 🚧
 - Customize a vite bundler to work with single-spa ✅
 - Expose a parcel and consume it 🚧
-- Routing cross frameworks work (test out scenarios) 🚧
 - import the `import-map.json` from external file in root-config ✅
+- Create a `manifest.json` from which we register our applications ✅
 - ...and more
 
 ## Running
@@ -22,4 +22,10 @@ node run-all install
 node run-all start
 
 Go to http://localhost:9000
+```
+
+To view the import map overrides feature, write in the console:
+
+```
+localStorage.setItem('devtools', true);
 ```
