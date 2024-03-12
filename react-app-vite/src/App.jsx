@@ -1,4 +1,4 @@
-import './root.component.css';
+import './App.css';
 
 import {
     BrowserRouter as Router,
@@ -12,11 +12,11 @@ import { Page1 } from './pages/page-1';
 import { Page2 } from './pages/page-2';
 import { Subpage } from './pages/subpage';
 
-export default function Root() {
+export default function App() {
   return (
-    <Router basename="react">
+    <Router basename="react-vite">
       <div>
-        <h3>👋 React root 👋</h3>
+        <h3>👋 React vite root 👋</h3>
         <nav>
           <ul className="nav-list">
             <li>
@@ -37,10 +37,10 @@ export default function Root() {
           <Route path="/" element={<Home />} />
           <Route path="/page1" element={<Page1 />} />
           <Route path="/page2" element={<Page2 />}>
-            <Route path="subpage" element={<Subpage />}/>
+            <Route path="subpage" element={<Subpage />} />
           </Route>
         </Routes>
       </div>
     </Router>
-  )
+  );
 }

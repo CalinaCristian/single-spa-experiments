@@ -1,0 +1,1 @@
+export const Subpage = () => <h4>React Vite Subpage</h4>

@@ -1,0 +1,1 @@
+export const Page1 = () => <h1>React Vite Page 1</h1>
