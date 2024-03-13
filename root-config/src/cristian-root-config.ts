@@ -1,5 +1,6 @@
 import {
     LifeCycles,
+    navigateToUrl,
     registerApplication,
     start,
 } from 'single-spa';
@@ -11,7 +12,14 @@ Object.entries(manifest).forEach(([appName, appRoute]) => {
         name: appName,
         app: () => System.import(appName) as Promise<LifeCycles>,
         activeWhen: appRoute
-    })
+    });
 });
+
+document.querySelectorAll('#nav a').forEach(a => {
+    a.addEventListener('click', (e) => {
+        e.preventDefault();
+        navigateToUrl(a.getAttribute('href'));
+    });
+})
 
 start();
