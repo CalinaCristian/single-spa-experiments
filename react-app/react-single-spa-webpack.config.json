@@ -1,12 +1,12 @@
 {
   "mode": "development",
-  "entry": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/root-config/src/cristian-root-config",
+  "entry": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/react-app/src/cristian-react-app",
   "output": {
-    "filename": "cristian-root-config.js",
+    "filename": "cristian-react-app.js",
     "libraryTarget": "module",
-    "path": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/root-config/dist",
-    "uniqueName": "root-config",
-    "devtoolNamespace": "root-config",
+    "path": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/react-app/dist",
+    "uniqueName": "react-app",
+    "devtoolNamespace": "react-app",
     "publicPath": ""
   },
   "module": {
@@ -15,7 +15,7 @@
         "test": {},
         "exclude": {},
         "use": {
-          "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/root-config/node_modules/babel-loader/lib/index.js"
+          "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/react-app/node_modules/babel-loader/lib/index.js"
         }
       },
       {
@@ -29,10 +29,10 @@
         ],
         "use": [
           {
-            "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/root-config/node_modules/style-loader/dist/cjs.js"
+            "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/react-app/node_modules/style-loader/dist/cjs.js"
           },
           {
-            "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/root-config/node_modules/css-loader/dist/cjs.js",
+            "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/react-app/node_modules/css-loader/dist/cjs.js",
             "options": {
               "modules": false
             }
@@ -46,10 +46,10 @@
         ],
         "use": [
           {
-            "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/root-config/node_modules/style-loader/dist/cjs.js"
+            "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/react-app/node_modules/style-loader/dist/cjs.js"
           },
           {
-            "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/root-config/node_modules/css-loader/dist/cjs.js",
+            "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/react-app/node_modules/css-loader/dist/cjs.js",
             "options": {
               "modules": true
             }
@@ -89,6 +89,11 @@
     },
     "allowedHosts": "all"
   },
+  "externals": [
+    "single-spa",
+    "module react",
+    "module react-dom"
+  ],
   "plugins": [
     {
       "opts": {
@@ -111,35 +116,16 @@
       }
     },
     {
-      "options": {
-        "typescript": {
-          "mode": "write-references"
-        }
-      }
-    },
-    {
-      "userOptions": {
-        "inject": false,
-        "scriptLoading": "module",
-        "template": "src/index.ejs",
-        "templateParameters": {
-          "isLocal": true,
-          "orgName": "cristian"
-        }
-      },
+      "userOptions": {},
       "version": 5,
       "options": {
-        "template": "src/index.ejs",
+        "template": "auto",
         "templateContent": false,
-        "templateParameters": {
-          "isLocal": true,
-          "orgName": "cristian"
-        },
         "filename": "index.html",
         "publicPath": "auto",
         "hash": false,
-        "inject": false,
-        "scriptLoading": "module",
+        "inject": "head",
+        "scriptLoading": "defer",
         "compile": true,
         "favicon": false,
         "minify": "auto",
@@ -152,6 +138,31 @@
         "base": false,
         "title": "Webpack App",
         "xhtml": false
+      }
+    },
+    {
+      "options": {
+        "isParcel": false,
+        "activeWhen": [
+          "/"
+        ],
+        "importMap": {
+          "imports": {}
+        },
+        "disabled": true,
+        "importMapOverrides": true,
+        "importMapOverridesLocalStorageKey": null,
+        "startOptions": {
+          "urlRerouteOnly": true
+        },
+        "appOrParcelName": "@cristian/react-app"
+      }
+    },
+    {
+      "options": {
+        "typescript": {
+          "mode": "write-references"
+        }
       }
     }
   ],
@@ -168,5 +179,6 @@
   },
   "experiments": {
     "outputModule": true
-  }
+  },
+  "target": "web"
 }

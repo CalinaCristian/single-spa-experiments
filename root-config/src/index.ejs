@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <style>
     .nav {
-      a { 
+      a {
         margin-right: 8px;
         text-decoration: none;
         color: black;
@@ -23,7 +24,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Root Config</title>
 
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: localhost:*; script-src 'unsafe-inline' 'unsafe-eval' https: localhost:*; connect-src https: localhost:* ws://localhost:*; style-src 'unsafe-inline' https:; object-src 'none';">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self' https: localhost:*; script-src 'unsafe-inline' 'unsafe-eval' https: localhost:*; connect-src https: localhost:* ws://localhost:*; style-src 'unsafe-inline' https:; object-src 'none';">
   <!-- <meta name="importmap-type" content="systemjs-importmap" /> -->
   <!-- If you wish to turn off import-map-overrides for specific environments (prod), uncomment the line below -->
   <!-- More info at https://github.com/joeldenning/import-map-overrides/blob/master/docs/configuration.md#domain-list -->
@@ -37,9 +39,9 @@
 
     More information about shared dependencies can be found at https://single-spa.js.org/docs/recommended-setup#sharing-with-import-maps.
   -->
-  <script type="importmap" src="/import-map-shared.json">
-  </script>
-  <!-- <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/module/single-spa.min.js" as="script"> -->
+  <!-- <script type="importmap" src="/import-map-shared.json"> -->
+  <!-- </script> -->
+  <!-- <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/umd/single-spa.min.js" as="script"> -->
   <!-- <script type="module">
     import singleSpa from 'https://cdn.jsdelivr.net/npm/single-spa@6.0.1/+esm'
     </script> -->
@@ -47,7 +49,28 @@
   <!-- Add your organization's prod import map URL to this script's src  -->
   <!-- <script type="systemjs-importmap" src="/importmap.json"></script> -->
   <!-- <% if (isLocal) { %> -->
-  <script type="importmap" src="/import-map.json"></script>
+  <!-- <script type="importmap" src="/import-map.json"></script> -->
+
+  <script type="importmap">
+    {
+      "imports": {
+          "react": "https://cdn.jsdelivr.net/npm/react@17.0.2/umd/react.production.min.js",
+          "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js",
+          "@cristian/root-config": "//localhost:9000/cristian-root-config.js",
+          "@cristian/react-app": "//localhost:8080/cristian-react-app.js",
+          "@cristian/ng-app": "//localhost:4200/main.js",
+          "@cristian/react-app-vite": "//localhost:3000/main.js",
+          "@cristian/solutions": "https://localhost:4244/main.js"
+      },
+      "scopes": {
+        "@cristian/react-app-vite": {
+            "react": "https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js",
+            "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"
+        }
+    }
+  }
+  </script>
+
   <!-- <% } %> -->
 
   <!--
@@ -56,17 +79,18 @@
   -->
   <script src="https://cdn.jsdelivr.net/npm/zone.js@0.11.3/dist/zone.min.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script> -->
   <!-- <% if (isLocal) { %>
   <!-- <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.js"></script> -->
   <% } else { %>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.min.js"></script> -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script> -->
-  <% } %> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script> -->
+    <% } %> -->
 
-  <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
+      <!-- <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full> -->
 </head>
+
 <body>
   <noscript>
     You need to enable JavaScript to run this app.
@@ -75,7 +99,7 @@
     System.import('@cristian/root-config');
   </script> -->
 
-  <script type="module" src="./cristian-root-config.js"></script>
+  <script type="module" src="/cristian-root-config.js"></script>
 
   <h1> Common layout for microfrontends </h1>
   <nav id="nav" class="nav">
@@ -84,4 +108,5 @@
     <a href="/ng-app"> 🔗Angular </a>
   </nav>
 </body>
+
 </html>

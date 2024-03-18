@@ -1,6 +1,6 @@
 const { merge } = require("webpack-merge");
 const singleSpaDefaults = require("webpack-config-single-spa-react-ts");
-
+const { writeFileSync } = require('fs');
 module.exports = (webpackConfigEnv, argv) => {
   /** 
    * TODO: We might want to customize/override this instead of using those defaults
@@ -15,8 +15,26 @@ module.exports = (webpackConfigEnv, argv) => {
     webpackConfigEnv,
     argv,
   });
-
-  return merge(defaultConfig, {
+  const finalConfig = merge(defaultConfig, {
     // modify the webpack config however you'd like to by adding to this object
+    output: {
+      libraryTarget: 'module',
+    },
+    target: 'web',
+    experiments: {
+      outputModule: true,
+    },
   });
+
+  finalConfig.plugins = finalConfig.plugins.filter(plugin => !plugin.options || !plugin.options.hasOwnProperty('systemjsModuleName'))
+
+  finalConfig.externals = [
+    "single-spa",
+    "module react",
+    "module react-dom"
+  ];
+
+  writeFileSync('react-single-spa-webpack.config.json', JSON.stringify(finalConfig, null, 2));
+
+  return finalConfig
 };

@@ -623,18 +623,27 @@
     "compress": false,
     "static": false,
     "server": "http",
-    "allowedHosts": "all",
     "devMiddleware": {
       "publicPath": "/",
       "stats": false
     },
-    "liveReload": false,
+    "liveReload": true,
     "hot": false,
-    "webSocketServer": false,
+    "webSocketServer": {
+      "options": {
+        "path": "/ng-cli-ws"
+      }
+    },
     "client": {
+      "logging": "info",
       "webSocketURL": {
         "hostname": "localhost",
         "port": 4200
+      },
+      "overlay": {
+        "errors": true,
+        "warnings": false,
+        "runtimeErrors": false
       }
     }
   },
@@ -745,7 +754,7 @@
     "type": "filesystem",
     "cacheDirectory": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/.angular/cache/17.2.3/angular-webpack",
     "maxMemoryGenerations": 1,
-    "name": "afc2559f4eb99c3463e2df584f1689fa72acaf59"
+    "name": "24943d52d9f3614974017729afccff576dc0aff8"
   },
   "optimization": {
     "minimizer": [],

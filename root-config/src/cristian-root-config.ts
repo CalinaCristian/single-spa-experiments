@@ -11,7 +11,13 @@ Object.entries(manifest).forEach(([appName, appRoute]) => {
     console.log(appName, appRoute)
     registerApplication({
         name: appName,
-        app: () => import(appName).then(m => console.log(m)) as Promise<LifeCycles>,
+        app: (...args) => {
+            console.log('loading', appName, args);
+            return import(/* webpackIgnore: true */ appName).then(module => {
+                console.log('module', module);
+                return module;
+            })
+        },
         activeWhen: appRoute
     });
 });

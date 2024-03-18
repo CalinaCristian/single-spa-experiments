@@ -13,19 +13,21 @@ export default defineConfig({
     build: {
         lib: {
             entry: 'src/main.jsx',
-            formats: ['esm']
+            formats: ['es']
         },
         cssCodeSplit: true, // inline css within the bundled js
         rollupOptions: {
             input: "src/main.jsx",
             preserveEntrySignatures: true,
-            external: ['react', 'react-dom'],
+            // external: ['react', 'react-dom'],
             output: {
+                format: 'es',
                 entryFileNames: 'main.js',
-                globals: {
-                    react: 'React',
-                    'react-dom': 'ReactDOM'
-                },
+                esModule: true,
+                // globals: {
+                //     react: 'React',
+                //     'react-dom': 'ReactDOM'
+                // },
             }
         },
     },

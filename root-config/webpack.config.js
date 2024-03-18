@@ -20,6 +20,7 @@ module.exports = (webpackConfigEnv, argv, context) => {
     plugins: [
       new HtmlWebpackPlugin({
         inject: false,
+        scriptLoading: 'module',
         template: "src/index.ejs",
         templateParameters: {
           isLocal: webpackConfigEnv && webpackConfigEnv.isLocal,
@@ -38,6 +39,9 @@ module.exports = (webpackConfigEnv, argv, context) => {
   finalConfig.plugins = finalConfig.plugins.filter(plugin => !plugin.options || !plugin.options.hasOwnProperty('systemjsModuleName'))
 
   delete finalConfig.externals;
+  // finalConfig.externals = {
+  //     // constants: 'module constants',
+  // }
 
   writeFileSync('root-config-single-spa-webpack.config.json', JSON.stringify(finalConfig, null, 2));
 
