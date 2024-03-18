@@ -6,11 +6,12 @@ import {
 } from 'single-spa';
 
 import manifest from './manifest.json';
-
+console.log(manifest);
 Object.entries(manifest).forEach(([appName, appRoute]) => {
+    console.log(appName, appRoute)
     registerApplication({
         name: appName,
-        app: () => System.import(appName) as Promise<LifeCycles>,
+        app: () => import(appName).then(m => console.log(m)) as Promise<LifeCycles>,
         activeWhen: appRoute
     });
 });

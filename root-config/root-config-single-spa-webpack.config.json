@@ -1,0 +1,171 @@
+{
+  "mode": "development",
+  "entry": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/root-config/src/cristian-root-config",
+  "output": {
+    "filename": "cristian-root-config.js",
+    "libraryTarget": "module",
+    "path": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/root-config/dist",
+    "uniqueName": "root-config",
+    "devtoolNamespace": "root-config",
+    "publicPath": ""
+  },
+  "module": {
+    "rules": [
+      {
+        "test": {},
+        "exclude": {},
+        "use": {
+          "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/root-config/node_modules/babel-loader/lib/index.js"
+        }
+      },
+      {
+        "test": {},
+        "include": [
+          {},
+          {}
+        ],
+        "exclude": [
+          {}
+        ],
+        "use": [
+          {
+            "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/root-config/node_modules/style-loader/dist/cjs.js"
+          },
+          {
+            "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/root-config/node_modules/css-loader/dist/cjs.js",
+            "options": {
+              "modules": false
+            }
+          }
+        ]
+      },
+      {
+        "test": {},
+        "exclude": [
+          {}
+        ],
+        "use": [
+          {
+            "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/root-config/node_modules/style-loader/dist/cjs.js"
+          },
+          {
+            "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/root-config/node_modules/css-loader/dist/cjs.js",
+            "options": {
+              "modules": true
+            }
+          }
+        ]
+      },
+      {
+        "test": {},
+        "exclude": {},
+        "type": "asset/resource"
+      },
+      {
+        "test": {},
+        "exclude": {},
+        "type": "asset/resource"
+      },
+      {
+        "test": {},
+        "exclude": [
+          {},
+          {}
+        ],
+        "type": "asset/source"
+      }
+    ]
+  },
+  "devtool": "source-map",
+  "devServer": {
+    "historyApiFallback": true,
+    "headers": {
+      "Access-Control-Allow-Origin": "*"
+    },
+    "client": {
+      "webSocketURL": {
+        "hostname": "localhost"
+      }
+    },
+    "allowedHosts": "all"
+  },
+  "plugins": [
+    {
+      "opts": {
+        "analyzerMode": "disabled",
+        "analyzerHost": "127.0.0.1",
+        "reportFilename": null,
+        "defaultSizes": "parsed",
+        "openAnalyzer": true,
+        "generateStatsFile": false,
+        "statsFilename": "stats.json",
+        "statsOptions": null,
+        "excludeAssets": null,
+        "logLevel": "info",
+        "startAnalyzer": true,
+        "analyzerPort": 8888
+      },
+      "server": null,
+      "logger": {
+        "activeLevels": {}
+      }
+    },
+    {
+      "options": {
+        "typescript": {
+          "mode": "write-references"
+        }
+      }
+    },
+    {
+      "userOptions": {
+        "inject": false,
+        "template": "src/index.ejs",
+        "templateParameters": {
+          "isLocal": true,
+          "orgName": "cristian"
+        }
+      },
+      "version": 5,
+      "options": {
+        "template": "src/index.ejs",
+        "templateContent": false,
+        "templateParameters": {
+          "isLocal": true,
+          "orgName": "cristian"
+        },
+        "filename": "index.html",
+        "publicPath": "auto",
+        "hash": false,
+        "inject": false,
+        "scriptLoading": "defer",
+        "compile": true,
+        "favicon": false,
+        "minify": "auto",
+        "cache": true,
+        "showErrors": true,
+        "chunks": "all",
+        "excludeChunks": [],
+        "chunksSortMode": "auto",
+        "meta": {},
+        "base": false,
+        "title": "Webpack App",
+        "xhtml": false
+      }
+    }
+  ],
+  "resolve": {
+    "extensions": [
+      ".mjs",
+      ".js",
+      ".jsx",
+      ".wasm",
+      ".json",
+      ".ts",
+      ".tsx"
+    ]
+  },
+  "experiments": {
+    "outputModule": true
+  }
+}

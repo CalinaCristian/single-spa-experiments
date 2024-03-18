@@ -1,0 +1,757 @@
+{
+  "plugins": [
+    {},
+    {
+      "options": {
+        "aot": true,
+        "scriptsOptimization": false
+      }
+    },
+    {
+      "options": {},
+      "modules": {}
+    },
+    {
+      "profile": false,
+      "modulesCount": 5000,
+      "dependenciesCount": 10000,
+      "showEntries": true,
+      "showModules": true,
+      "showDependencies": true,
+      "showActiveModules": false
+    },
+    {
+      "options": {
+        "allowedDependencies": []
+      },
+      "shownWarnings": {},
+      "allowedDependencies": {}
+    },
+    {
+      "patterns": [
+        {
+          "context": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/src/",
+          "to": "",
+          "from": "favicon.ico",
+          "noErrorOnMissing": true,
+          "force": true,
+          "globOptions": {
+            "dot": true,
+            "followSymbolicLinks": false,
+            "ignore": [
+              "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/src/.gitkeep",
+              "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/src/**/.DS_Store",
+              "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/src/**/Thumbs.db"
+            ]
+          },
+          "priority": 0
+        },
+        {
+          "context": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/src/assets/",
+          "to": "assets/",
+          "from": "**/*",
+          "noErrorOnMissing": true,
+          "force": true,
+          "globOptions": {
+            "dot": true,
+            "followSymbolicLinks": false,
+            "ignore": [
+              "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/src/assets/.gitkeep",
+              "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/src/assets/**/.DS_Store",
+              "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/src/assets/**/Thumbs.db"
+            ]
+          },
+          "priority": 1
+        }
+      ],
+      "options": {}
+    },
+    {},
+    {
+      "sourceMapFilename": "[file].map",
+      "sourceMappingURLComment": "\n//# sourceMappingURL=[url]",
+      "moduleFilenameTemplate": "[resource-path]",
+      "fallbackModuleFilenameTemplate": "webpack://[namespace]/[resourcePath]?[hash]",
+      "namespace": "",
+      "options": {
+        "filename": "[file].map",
+        "include": [
+          {},
+          {}
+        ],
+        "sourceRoot": "webpack:///",
+        "moduleFilenameTemplate": "[resource-path]"
+      }
+    },
+    {
+      "pluginOptions": {
+        "emitClassMetadata": false,
+        "emitNgModuleScope": true,
+        "jitMode": false,
+        "fileReplacements": {},
+        "substitutions": {},
+        "directTemplateLoading": true,
+        "tsconfig": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/tsconfig.app.json",
+        "compilerOptions": {
+          "sourceMap": true,
+          "declaration": false,
+          "declarationMap": false,
+          "preserveSymlinks": false
+        },
+        "inlineStyleFileExtension": "scss"
+      },
+      "fileDependencies": {},
+      "requiredFilesToEmit": {},
+      "requiredFilesToEmitCache": {},
+      "fileEmitHistory": {}
+    },
+    {
+      "budgets": []
+    },
+    {},
+    {}
+  ],
+  "module": {
+    "rules": [
+      {
+        "test": {},
+        "resourceQuery": {},
+        "type": "asset/source"
+      },
+      {
+        "test": {},
+        "sideEffects": true
+      },
+      {
+        "test": {},
+        "resolve": {
+          "fullySpecified": false
+        },
+        "exclude": [
+          {}
+        ],
+        "use": [
+          {
+            "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/node_modules/@angular-devkit/build-angular/src/tools/babel/webpack-loader.js",
+            "options": {
+              "cacheDirectory": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/.angular/cache/17.2.3/babel-webpack",
+              "aot": true,
+              "optimize": true,
+              "supportedBrowsers": [
+                "chrome 122",
+                "chrome 121",
+                "edge 122",
+                "edge 121",
+                "firefox 123",
+                "firefox 115",
+                "ios_saf 17.4",
+                "ios_saf 17.3",
+                "ios_saf 17.2",
+                "ios_saf 17.1",
+                "ios_saf 17.0",
+                "ios_saf 16.6-16.7",
+                "ios_saf 16.5",
+                "ios_saf 16.4",
+                "ios_saf 16.3",
+                "ios_saf 16.2",
+                "ios_saf 16.1",
+                "ios_saf 16.0",
+                "safari 17.4",
+                "safari 17.3",
+                "safari 17.2",
+                "safari 17.1",
+                "safari 17.0",
+                "safari 16.6",
+                "safari 16.5",
+                "safari 16.4",
+                "safari 16.3",
+                "safari 16.2",
+                "safari 16.1",
+                "safari 16.0"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "test": {},
+        "enforce": "pre",
+        "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/node_modules/source-map-loader/dist/cjs.js",
+        "options": {}
+      },
+      {
+        "test": {},
+        "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/node_modules/@ngtools/webpack/src/ivy/index.js",
+        "exclude": [
+          {}
+        ]
+      },
+      {
+        "test": {},
+        "rules": [
+          {
+            "oneOf": [
+              {
+                "use": [
+                  {
+                    "loader": "style-loader"
+                  },
+                  {
+                    "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/node_modules/css-loader/dist/cjs.js",
+                    "options": {
+                      "url": false,
+                      "sourceMap": true,
+                      "importLoaders": 1
+                    }
+                  },
+                  {
+                    "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/node_modules/postcss-loader/dist/cjs.js",
+                    "options": {
+                      "sourceMap": true
+                    }
+                  }
+                ],
+                "resourceQuery": {}
+              },
+              {
+                "use": [
+                  {
+                    "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/node_modules/css-loader/dist/cjs.js",
+                    "options": {
+                      "url": false,
+                      "sourceMap": true,
+                      "importLoaders": 1,
+                      "exportType": "string",
+                      "esModule": false
+                    }
+                  },
+                  {
+                    "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/node_modules/postcss-loader/dist/cjs.js",
+                    "options": {}
+                  }
+                ],
+                "resourceQuery": {}
+              }
+            ]
+          },
+          {
+            "use": []
+          }
+        ]
+      },
+      {
+        "test": {},
+        "rules": [
+          {
+            "oneOf": [
+              {
+                "use": [
+                  {
+                    "loader": "style-loader"
+                  },
+                  {
+                    "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/node_modules/css-loader/dist/cjs.js",
+                    "options": {
+                      "url": false,
+                      "sourceMap": true,
+                      "importLoaders": 1
+                    }
+                  },
+                  {
+                    "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/node_modules/postcss-loader/dist/cjs.js",
+                    "options": {
+                      "sourceMap": true
+                    }
+                  }
+                ],
+                "resourceQuery": {}
+              },
+              {
+                "use": [
+                  {
+                    "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/node_modules/css-loader/dist/cjs.js",
+                    "options": {
+                      "url": false,
+                      "sourceMap": true,
+                      "importLoaders": 1,
+                      "exportType": "string",
+                      "esModule": false
+                    }
+                  },
+                  {
+                    "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/node_modules/postcss-loader/dist/cjs.js",
+                    "options": {}
+                  }
+                ],
+                "resourceQuery": {}
+              }
+            ]
+          },
+          {
+            "use": [
+              {
+                "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/node_modules/resolve-url-loader/index.js",
+                "options": {
+                  "sourceMap": true
+                }
+              },
+              {
+                "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/node_modules/sass-loader/dist/cjs.js",
+                "options": {
+                  "sourceMap": true,
+                  "api": "modern",
+                  "implementation": {
+                    "rebase": false,
+                    "workers": [],
+                    "availableWorkers": [],
+                    "requests": {},
+                    "workerPath": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/node_modules/@angular-devkit/build-angular/src/tools/sass/worker.js",
+                    "idCounter": 1,
+                    "nextWorkerIndex": 0
+                  },
+                  "webpackImporter": false
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "test": {},
+        "rules": [
+          {
+            "oneOf": [
+              {
+                "use": [
+                  {
+                    "loader": "style-loader"
+                  },
+                  {
+                    "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/node_modules/css-loader/dist/cjs.js",
+                    "options": {
+                      "url": false,
+                      "sourceMap": true,
+                      "importLoaders": 1
+                    }
+                  },
+                  {
+                    "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/node_modules/postcss-loader/dist/cjs.js",
+                    "options": {
+                      "sourceMap": true
+                    }
+                  }
+                ],
+                "resourceQuery": {}
+              },
+              {
+                "use": [
+                  {
+                    "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/node_modules/css-loader/dist/cjs.js",
+                    "options": {
+                      "url": false,
+                      "sourceMap": true,
+                      "importLoaders": 1,
+                      "exportType": "string",
+                      "esModule": false
+                    }
+                  },
+                  {
+                    "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/node_modules/postcss-loader/dist/cjs.js",
+                    "options": {}
+                  }
+                ],
+                "resourceQuery": {}
+              }
+            ]
+          },
+          {
+            "use": [
+              {
+                "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/node_modules/resolve-url-loader/index.js",
+                "options": {
+                  "sourceMap": true
+                }
+              },
+              {
+                "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/node_modules/sass-loader/dist/cjs.js",
+                "options": {
+                  "sourceMap": true,
+                  "api": "modern",
+                  "implementation": {
+                    "rebase": false,
+                    "workers": [],
+                    "availableWorkers": [],
+                    "requests": {},
+                    "workerPath": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/node_modules/@angular-devkit/build-angular/src/tools/sass/worker.js",
+                    "idCounter": 1,
+                    "nextWorkerIndex": 0
+                  },
+                  "webpackImporter": false
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "test": {},
+        "rules": [
+          {
+            "oneOf": [
+              {
+                "use": [
+                  {
+                    "loader": "style-loader"
+                  },
+                  {
+                    "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/node_modules/css-loader/dist/cjs.js",
+                    "options": {
+                      "url": false,
+                      "sourceMap": true,
+                      "importLoaders": 1
+                    }
+                  },
+                  {
+                    "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/node_modules/postcss-loader/dist/cjs.js",
+                    "options": {
+                      "sourceMap": true
+                    }
+                  }
+                ],
+                "resourceQuery": {}
+              },
+              {
+                "use": [
+                  {
+                    "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/node_modules/css-loader/dist/cjs.js",
+                    "options": {
+                      "url": false,
+                      "sourceMap": true,
+                      "importLoaders": 1,
+                      "exportType": "string",
+                      "esModule": false
+                    }
+                  },
+                  {
+                    "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/node_modules/postcss-loader/dist/cjs.js",
+                    "options": {}
+                  }
+                ],
+                "resourceQuery": {}
+              }
+            ]
+          },
+          {
+            "use": [
+              {
+                "loader": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/node_modules/less-loader/dist/cjs.js",
+                "options": {
+                  "implementation": {
+                    "mixin": {},
+                    "lesscHelper": {},
+                    "fs": {
+                      "F_OK": 0,
+                      "R_OK": 4,
+                      "W_OK": 2,
+                      "X_OK": 1,
+                      "constants": {
+                        "UV_FS_SYMLINK_DIR": 1,
+                        "UV_FS_SYMLINK_JUNCTION": 2,
+                        "O_RDONLY": 0,
+                        "O_WRONLY": 1,
+                        "O_RDWR": 2,
+                        "UV_DIRENT_UNKNOWN": 0,
+                        "UV_DIRENT_FILE": 1,
+                        "UV_DIRENT_DIR": 2,
+                        "UV_DIRENT_LINK": 3,
+                        "UV_DIRENT_FIFO": 4,
+                        "UV_DIRENT_SOCKET": 5,
+                        "UV_DIRENT_CHAR": 6,
+                        "UV_DIRENT_BLOCK": 7,
+                        "S_IFMT": 61440,
+                        "S_IFREG": 32768,
+                        "S_IFDIR": 16384,
+                        "S_IFCHR": 8192,
+                        "S_IFBLK": 24576,
+                        "S_IFIFO": 4096,
+                        "S_IFLNK": 40960,
+                        "S_IFSOCK": 49152,
+                        "O_CREAT": 512,
+                        "O_EXCL": 2048,
+                        "UV_FS_O_FILEMAP": 0,
+                        "O_NOCTTY": 131072,
+                        "O_TRUNC": 1024,
+                        "O_APPEND": 8,
+                        "O_DIRECTORY": 1048576,
+                        "O_NOFOLLOW": 256,
+                        "O_SYNC": 128,
+                        "O_DSYNC": 4194304,
+                        "O_SYMLINK": 2097152,
+                        "O_NONBLOCK": 4,
+                        "S_IRWXU": 448,
+                        "S_IRUSR": 256,
+                        "S_IWUSR": 128,
+                        "S_IXUSR": 64,
+                        "S_IRWXG": 56,
+                        "S_IRGRP": 32,
+                        "S_IWGRP": 16,
+                        "S_IXGRP": 8,
+                        "S_IRWXO": 7,
+                        "S_IROTH": 4,
+                        "S_IWOTH": 2,
+                        "S_IXOTH": 1,
+                        "F_OK": 0,
+                        "R_OK": 4,
+                        "W_OK": 2,
+                        "X_OK": 1,
+                        "UV_FS_COPYFILE_EXCL": 1,
+                        "COPYFILE_EXCL": 1,
+                        "UV_FS_COPYFILE_FICLONE": 2,
+                        "COPYFILE_FICLONE": 2,
+                        "UV_FS_COPYFILE_FICLONE_FORCE": 4,
+                        "COPYFILE_FICLONE_FORCE": 4
+                      },
+                      "promises": {
+                        "constants": {
+                          "UV_FS_SYMLINK_DIR": 1,
+                          "UV_FS_SYMLINK_JUNCTION": 2,
+                          "O_RDONLY": 0,
+                          "O_WRONLY": 1,
+                          "O_RDWR": 2,
+                          "UV_DIRENT_UNKNOWN": 0,
+                          "UV_DIRENT_FILE": 1,
+                          "UV_DIRENT_DIR": 2,
+                          "UV_DIRENT_LINK": 3,
+                          "UV_DIRENT_FIFO": 4,
+                          "UV_DIRENT_SOCKET": 5,
+                          "UV_DIRENT_CHAR": 6,
+                          "UV_DIRENT_BLOCK": 7,
+                          "S_IFMT": 61440,
+                          "S_IFREG": 32768,
+                          "S_IFDIR": 16384,
+                          "S_IFCHR": 8192,
+                          "S_IFBLK": 24576,
+                          "S_IFIFO": 4096,
+                          "S_IFLNK": 40960,
+                          "S_IFSOCK": 49152,
+                          "O_CREAT": 512,
+                          "O_EXCL": 2048,
+                          "UV_FS_O_FILEMAP": 0,
+                          "O_NOCTTY": 131072,
+                          "O_TRUNC": 1024,
+                          "O_APPEND": 8,
+                          "O_DIRECTORY": 1048576,
+                          "O_NOFOLLOW": 256,
+                          "O_SYNC": 128,
+                          "O_DSYNC": 4194304,
+                          "O_SYMLINK": 2097152,
+                          "O_NONBLOCK": 4,
+                          "S_IRWXU": 448,
+                          "S_IRUSR": 256,
+                          "S_IWUSR": 128,
+                          "S_IXUSR": 64,
+                          "S_IRWXG": 56,
+                          "S_IRGRP": 32,
+                          "S_IWGRP": 16,
+                          "S_IXGRP": 8,
+                          "S_IRWXO": 7,
+                          "S_IROTH": 4,
+                          "S_IWOTH": 2,
+                          "S_IXOTH": 1,
+                          "F_OK": 0,
+                          "R_OK": 4,
+                          "W_OK": 2,
+                          "X_OK": 1,
+                          "UV_FS_COPYFILE_EXCL": 1,
+                          "COPYFILE_EXCL": 1,
+                          "UV_FS_COPYFILE_FICLONE": 2,
+                          "COPYFILE_FICLONE": 2,
+                          "UV_FS_COPYFILE_FICLONE_FORCE": 4,
+                          "COPYFILE_FICLONE_FORCE": 4
+                        }
+                      }
+                    },
+                    "options": {
+                      "javascriptEnabled": false,
+                      "depends": false,
+                      "compress": false,
+                      "lint": false,
+                      "paths": [],
+                      "color": true,
+                      "strictImports": false,
+                      "insecure": false,
+                      "rootpath": "",
+                      "rewriteUrls": false,
+                      "math": 1,
+                      "strictUnits": false,
+                      "globalVars": null,
+                      "modifyVars": null,
+                      "urlArgs": ""
+                    }
+                  },
+                  "sourceMap": true,
+                  "lessOptions": {
+                    "javascriptEnabled": true,
+                    "paths": []
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {}
+    ],
+    "strictExportPresence": true,
+    "parser": {
+      "javascript": {
+        "requireContext": false,
+        "url": false,
+        "worker": false
+      }
+    }
+  },
+  "devServer": {
+    "host": "localhost",
+    "port": 4200,
+    "headers": {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Headers": "*"
+    },
+    "historyApiFallback": false,
+    "setupExitSignals": false,
+    "compress": false,
+    "static": false,
+    "server": "http",
+    "allowedHosts": "all",
+    "devMiddleware": {
+      "publicPath": "/",
+      "stats": false
+    },
+    "liveReload": false,
+    "hot": false,
+    "webSocketServer": false,
+    "client": {
+      "webSocketURL": {
+        "hostname": "localhost",
+        "port": 4200
+      }
+    }
+  },
+  "mode": "development",
+  "devtool": "source-map",
+  "target": [
+    "web",
+    "es2015"
+  ],
+  "profile": false,
+  "resolve": {
+    "roots": [
+      "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app"
+    ],
+    "extensions": [
+      ".ts",
+      ".tsx",
+      ".mjs",
+      ".js"
+    ],
+    "symlinks": true,
+    "modules": [
+      "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app",
+      "node_modules"
+    ],
+    "mainFields": [
+      "es2020",
+      "es2015",
+      "browser",
+      "module",
+      "main"
+    ],
+    "conditionNames": [
+      "es2020",
+      "es2015",
+      "..."
+    ]
+  },
+  "resolveLoader": {
+    "symlinks": true
+  },
+  "context": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app",
+  "entry": {
+    "main": [
+      "src/styles.scss?ngGlobalStyle",
+      "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/src/main.single-spa.ts"
+    ]
+  },
+  "externals": [
+    "zone.js"
+  ],
+  "output": {
+    "uniqueName": "ng-app",
+    "hashFunction": "xxhash64",
+    "clean": true,
+    "path": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/dist/ng-app",
+    "publicPath": "http://localhost:4200/",
+    "filename": "[name].js",
+    "chunkFilename": "[name].js",
+    "libraryTarget": "system",
+    "crossOriginLoading": false,
+    "trustedTypes": "angular#bundler",
+    "scriptType": "module",
+    "chunkLoadingGlobal": "webpackJsonpng-app",
+    "devtoolNamespace": "ng-app"
+  },
+  "watch": true,
+  "watchOptions": {
+    "followSymlinks": false
+  },
+  "snapshot": {
+    "module": {
+      "hash": false
+    }
+  },
+  "performance": {
+    "hints": false
+  },
+  "ignoreWarnings": [
+    {},
+    {},
+    {}
+  ],
+  "experiments": {
+    "backCompat": false,
+    "syncWebAssembly": true,
+    "asyncWebAssembly": true,
+    "topLevelAwait": false
+  },
+  "infrastructureLogging": {
+    "level": "error"
+  },
+  "stats": {
+    "all": false,
+    "colors": true,
+    "hash": true,
+    "timings": true,
+    "chunks": true,
+    "builtAt": true,
+    "warnings": true,
+    "errors": true,
+    "assets": true,
+    "cachedAssets": true,
+    "ids": true,
+    "entrypoints": true
+  },
+  "cache": {
+    "type": "filesystem",
+    "cacheDirectory": "/Users/robertandreimoldoveanu/repos/single-spa-experiments/ng-app/.angular/cache/17.2.3/angular-webpack",
+    "maxMemoryGenerations": 1,
+    "name": "afc2559f4eb99c3463e2df584f1689fa72acaf59"
+  },
+  "optimization": {
+    "minimizer": [],
+    "moduleIds": "deterministic",
+    "chunkIds": "deterministic",
+    "emitOnErrors": false
+  },
+  "node": false
+}

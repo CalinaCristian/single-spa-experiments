@@ -13,7 +13,7 @@ export default defineConfig({
     build: {
         lib: {
             entry: 'src/main.jsx',
-            formats: ['system']
+            formats: ['esm']
         },
         cssCodeSplit: true, // inline css within the bundled js
         rollupOptions: {
