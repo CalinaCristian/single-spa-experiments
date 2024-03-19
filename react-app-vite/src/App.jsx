@@ -20,7 +20,7 @@ export default function App() {
         <nav>
           <ul className="nav-list">
             <li>
-              <Link to="/">🔗Home</Link>
+              <Link to="/">🔗Home2</Link>
             </li>
             <li>
               <Link to="/page1">🔗Page 1</Link>

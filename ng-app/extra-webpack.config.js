@@ -1,4 +1,5 @@
 const singleSpaAngularWebpack = require('single-spa-angular/lib/webpack').default;
+const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 const { writeFileSync } = require('fs');
 module.exports = (config, options) => {
   const singleSpaWebpackConfig = singleSpaAngularWebpack(config, options);
@@ -13,6 +14,17 @@ module.exports = (config, options) => {
     output: {
       ...singleSpaWebpackConfig.output,
       libraryTarget: 'module',
-    }
+    },
+    plugins: [
+      ...singleSpaWebpackConfig.plugins,
+      new ModuleFederationPlugin({
+        name: 'ngApp',
+        library: { type: 'module' },
+        filename: 'remoteEntry.js',
+        exposes: {
+          './Module': './src/main.single-spa.ts',
+        }
+      })
+    ]
   };
 };

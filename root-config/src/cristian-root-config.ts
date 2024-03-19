@@ -15,7 +15,10 @@ Object.entries(manifest).forEach(([appName, appRoute]) => {
             console.log('loading', appName, args);
             return import(/* webpackIgnore: true */ appName).then(module => {
                 console.log('module', module);
-                return module;
+                if (module.get) {
+                    return module.get('./Module').then(m => m());
+                }
+                return module
             })
         },
         activeWhen: appRoute
