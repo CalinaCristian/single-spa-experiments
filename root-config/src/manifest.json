@@ -1,5 +1,6 @@
 {
     "@cristian/react-app":  "/react",
     "@cristian/react-app-vite": "/react-vite",
-    "@cristian/ng-app": "/ng-app"
+    "@cristian/ng-app": "/ng-app",
+    "@portal/portal": "/portal"
 }

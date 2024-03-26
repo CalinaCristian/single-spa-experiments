@@ -3,6 +3,10 @@
 <head>
   <style>
     .nav {
+      h2 {
+        color: red;
+      }
+
       a { 
         margin-right: 8px;
         text-decoration: none;
@@ -17,6 +21,34 @@
         background-color: lightgray;
       }
     }
+
+    .container {
+        margin-top: 16px;
+        position: relative;
+        border: 2px solid blue;
+        padding: 8px;
+        border-radius: 8px;
+
+        .react {
+            border-color: green;
+        }
+
+        .ng {
+            border-color: red;
+        }
+
+        .react-vite {
+            border-color: violet;
+        }
+      
+        .label {
+          position: absolute;
+          top: -10px;
+          padding: 0 8px;
+          background-color: white;
+        }
+    }
+
   </style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,7 +96,8 @@
 
   <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
 </head>
-<body>
+<body class="container">
+  <div class="label">Root config</div>
   <noscript>
     You need to enable JavaScript to run this app.
   </noscript>
@@ -74,9 +107,12 @@
 
   <h1> Common layout for microfrontends </h1>
   <nav id="nav" class="nav">
-    <a href="/react"> 🔗React </a>
-    <a href="/react-vite"> 🔗React Vite </a>
-    <a href="/ng-app"> 🔗Angular </a>
+    <div>
+        <h2>App routes</h2>
+        <a href="/react"> 🔗React </a>
+        <a href="/react-vite"> 🔗React Vite </a>
+        <a href="/ng-app"> 🔗Angular </a>
+    </div>
   </nav>
 </body>
 </html>

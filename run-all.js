@@ -16,13 +16,13 @@ const projects = [{
     command: install ? 'install' : 'run serve:single-spa:ng-app'
 }, {
     name: 'react-app',
-    command: install ? 'install' : 'run start'
+    command: install ? 'install' : 'start'
 }, {
     name: 'react-app-vite',
     command: install ? 'install' : 'run start:spa'
 }, {
     name: 'root-config',
-    command: install ? 'install' : 'run start'
+    command: install ? 'install' : 'start'
 }];
 
 const processProject = ({ name, command }) => {

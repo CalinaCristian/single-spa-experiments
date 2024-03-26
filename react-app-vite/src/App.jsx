@@ -15,7 +15,8 @@ import { Subpage } from './pages/subpage';
 export default function App() {
   return (
     <Router basename="react-vite">
-      <div>
+     <div className="container react-vite">
+        <div className='label'>React Vite</div>
         <h3>👋 React vite root 👋</h3>
         <nav>
           <ul className="nav-list">

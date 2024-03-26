@@ -15,7 +15,8 @@ import { Subpage } from './pages/subpage';
 export default function Root() {
   return (
     <Router basename="react">
-      <div>
+      <div className="container react">
+        <div className='label'>React</div>
         <h3>👋 React root 👋</h3>
         <nav>
           <ul className="nav-list">
