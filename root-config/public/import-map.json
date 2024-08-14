@@ -3,6 +3,7 @@
         "@cristian/root-config": "//localhost:9000/cristian-root-config.js",
         "@cristian/react-app": "//localhost:9002/cristian-react-app.js",
         "@cristian/ng-app": "//localhost:4200/main.js",
+        "@cristian/ng-app-18": "//localhost:4300/main.js",
         "@cristian/react-app-vite": "//localhost:9001/main.js"
     }
 }

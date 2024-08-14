@@ -15,6 +15,9 @@ const projects = [{
     name: 'ng-app',
     command: install ? 'install' : 'run serve:single-spa:ng-app'
 }, {
+    name: 'ng-app-18',
+    command: install ? 'install' : 'run serve:single-spa:ng-app-18'
+}, {
     name: 'react-app',
     command: install ? 'install' : 'start'
 }, {
